@@ -2,18 +2,32 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>https://2diw6pml.com/register?key=9345441065</title>
+    <title>https://2diw6pml.com/register?key=9345441065</title>
     <style>
         body {
             background: #000;
             color: #8a2be2;
             font-family: 'Arial', sans-serif;
             position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .blackhole-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex-grow: 1;
+            width: 100%;
         }
         .blackhole {
             width: 120px;
             height: 120px;
-            margin: 40px auto;
             position: relative;
             border-radius: 50%;
             background: 
@@ -74,8 +88,8 @@
         /* 倒计时样式 */
         .countdown {
             position: absolute;
-            top: -36px;
-            right: 10px;
+            top: 4px;
+            right: 16px;
             color: #8a2be2;
             font-size: 16px;
             padding: 5px 10px;
@@ -83,21 +97,26 @@
             border-radius: 5px;
             background-color: rgba(0, 0, 0, 0.5);
         }
+        .curve-indicator {
+            margin-top: 20px;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
     <!-- 顶部右边内容 -->
     <div class="countdown" id="countdown">3入页面</div>
     
-    <div class="blackhole">
-        <div class="accretion-disk" style="transform: translate(-50%, -50%) rotate(15deg); width: 160px; height: 50px;"></div>
-        <div class="accretion-disk" style="transform: translate(-50%, -50%) rotate(30deg); width: 200px; height: 70px;"></div>
+    <div class="blackhole-container">
+        <div class="blackhole">
+            <div class="accretion-disk" style="transform: translate(-50%, -50%) rotate(15deg); width: 160px; height: 50px;"></div>
+            <div class="accretion-disk" style="transform: translate(-50%, -50%) rotate(30deg); width: 200px; height: 70px;"></div>
+        </div>
+        <div class="space-time">
+            <div class="time-wave"></div>
+        </div>
+        <div class="curve-indicator">时空引力黑洞曲率: <span id="spacetimeCurve">0</span>%</div>
     </div>
-    <h2 style="text-align: center">引力黑洞外隧道</h2>
-    <div class="space-time">
-        <div class="time-wave"></div>
-    </div>
-    <div style="text-align: center; margin-top: 20px;">时空引力曲率: <span id="spacetimeCurve">0</span>%</div>
     
     <script>
         // 时空曲率模拟
